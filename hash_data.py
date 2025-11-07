@@ -6,10 +6,16 @@ import hashlib
 def hash_email(email):
     return hashlib.sha256(email.lower().encode()).hexdigest()
 
+import pandas as pd
 
-# Function to hash emails
-def hash_email(email):
-    return hashlib.sha256(email.lower().encode()).hexdigest()
+# Load Company A CSV
+company_a = pd.read_csv("company_A_customers.csv")
+# Load Company B CSV
+company_b = pd.read_csv("company_B_customers.csv")
+
+# Hash the emails
+company_a['hashed_email'] = company_a['email'].apply(hash_email)
+company_b['hashed_email'] = company_b['email'].apply(hash_email)
 
 # Load Company A CSV
 company_a = pd.read_csv("company_A_customers.csv")
