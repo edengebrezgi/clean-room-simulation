@@ -38,7 +38,7 @@ print("Hashing complete. Hashed CSVs saved!")
 # ----------------------------
 # Load hashed CSVs (optional if re-running)
 company_a_hashed = pd.read_csv("company_A_customers_hashed.csv")
-company_b_hashed = pd.rea
+company_b_hashed = pd.read_csv("company_B_customers_hashed.csv")
 
 # ----------------------------
 # Display sample overlapping users and save CSV
