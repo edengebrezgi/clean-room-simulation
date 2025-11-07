@@ -40,3 +40,18 @@ print("Hashing complete. Hashed CSVs saved!")
 company_a_hashed = pd.read_csv("company_A_customers_hashed.csv")
 company_b_hashed = pd.rea
 
+# ----------------------------
+# Display sample overlapping users and save CSV
+# ----------------------------
+# Show number of overlapping users
+print(f"Number of overlapping users: {len(overlap)}")
+
+# Show some sample overlapping users
+print("\nSample overlapping users:")
+print(overlap.head())
+
+# Save overlap table
+overlap.to_csv("overlapping_users.csv", index=False)
+print("\nOverlap CSV saved!")
+
+
